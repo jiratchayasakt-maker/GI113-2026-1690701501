@@ -12,7 +12,7 @@ namespace Lab06
     {
         static void Main(string[] args)
         {
-            // ================= FINAL BATTLE =================
+            // ================= FINAL BATTLE ==================
 
             Console.WriteLine("================== FINAL BATTLE =================");
             Console.WriteLine("You have been fighting the monster for many deys");
