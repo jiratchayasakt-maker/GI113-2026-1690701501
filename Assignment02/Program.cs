@@ -12,12 +12,12 @@ namespace Assignment02
     {
         static void Main(string[] args)
         {
-            const string materialName = "Emerald";
-            const double smaltRate = 0.20;
-            const double salvageRate = 0.40;
-            const double maxBatch = 500;
+            const string MaterialName = "Emerald";
+            const double SmaltRate = 0.20;
+            const double SalvageRate = 0.40;
+            const double MaxBatch = 500;
 
-            Console.WriteLine($"|| {materialName} Smelting {smaltRate} Salvage {salvageRate} ||");
+            Console.WriteLine($"|| {MaterialName} Smelting {SmaltRate} Salvage {SalvageRate} ||");
             Console.WriteLine("  _____________________________");
             Console.WriteLine(" /_|/_|/_|/_|/_/_|/_|/_|/_|/_|_|");
             Console.WriteLine("/_|/_|/_|/_|/_/_|/_|/_|/_|/_|/_|");
@@ -47,20 +47,20 @@ namespace Assignment02
             bool  amountValid = double.TryParse(Console.ReadLine(), out double amount);
             Console.WriteLine();
 
-            if (amountValid && amount > 0 && amount <= maxBatch)
+            if (amountValid && amount > 0 && amount <= MaxBatch)
             {
                 if (menu == 'T' || menu == 't')
                 {
-                    double ingot = amount * smaltRate;
+                    double ingot = amount * SmaltRate;
                     Console.WriteLine(" ---------------------------------------------");
-                    Console.WriteLine($"  {amount:F2} {materialName} Shard = {ingot:F2} {materialName} Gem");
+                    Console.WriteLine($"  {amount:F2} {MaterialName} Shard = {ingot:F2} {MaterialName} Gem");
                     Console.WriteLine(" ---------------------------------------------");
                 }
                 else if (menu == 'B' || menu == 'b')
                 {
-                    double ore = amount / salvageRate;
+                    double ore = amount / SalvageRate;
                     Console.WriteLine(" ---------------------------------------------");
-                    Console.WriteLine($"  {amount:F2} {materialName} Gem = {ore:F2} {materialName} Shard");
+                    Console.WriteLine($"  {amount:F2} {MaterialName} Gem = {ore:F2} {MaterialName} Shard");
                     Console.WriteLine(" ---------------------------------------------");
                 }
                 else
@@ -76,7 +76,7 @@ namespace Assignment02
                 Console.WriteLine(" Sorry, but you don't have enough materials to make it");
                 Console.WriteLine(" ------------------------------------------------------");
             }
-            else if (amountValid && amount > maxBatch)
+            else if (amountValid && amount > MaxBatch)
             {
                 Console.WriteLine(" ---------------------------------------");
                 Console.WriteLine(" Sorry, We don't craft that much at once");
